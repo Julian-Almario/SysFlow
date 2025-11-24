@@ -50,8 +50,8 @@ def main(page: ft.Page):
                 pie_chart,
                 ft.Container(content=center_content, alignment=ft.alignment.center),
             ],
-            width=200,
-            height=200,
+            width=150,
+            height=150,
         )
 
         return {
@@ -67,13 +67,14 @@ def main(page: ft.Page):
     page.add(
         ft.Column(
             [
-                ft.Row(
+                ft.Column(
                     [cpu_widget["container"], ram_widget["container"]],
-                    alignment="center",
-                    spacing=20,
+                    alignment=ft.MainAxisAlignment.START,
+                    horizontal_alignment=ft.CrossAxisAlignment.START,
+                    spacing=25,
                 ),
             ],
-            horizontal_alignment="center",
+            horizontal_alignment="start",
         )
     )
 
